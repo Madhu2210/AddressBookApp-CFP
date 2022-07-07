@@ -1,9 +1,18 @@
 package com.bridgelabz.addressbookappsb.DTO;
 
-public class ResponseDTO {
 
+
+public class ResponseDTO {
     private String message;
     private Object data;
+
+    public ResponseDTO() {
+    }
+
+    public ResponseDTO(String message, Object data) {
+        this.message = message;
+        this.data = data;
+    }
 
     public String getMessage() {
         return message;
@@ -21,20 +30,11 @@ public class ResponseDTO {
         this.data = data;
     }
 
-    public ResponseDTO(String message, Object data) {
-        this.message = message;
-        this.data = data;
-    }
-
-    public ResponseDTO() {
-    }
-
     @Override
     public String toString() {
-        return "ResponseDTO{" +
+        return "ResponseDto{" +
                 "message='" + message + '\'' +
                 ", data=" + data +
                 '}';
     }
 }
-

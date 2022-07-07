@@ -5,18 +5,24 @@ import com.bridgelabz.addressbookappsb.DTO.AddressDTO;
 import com.bridgelabz.addressbookappsb.model.AddressModel;
 
 import java.util.List;
+import java.util.Optional;
+
 
 public interface IAddressService {
-    public String getMessage();
+    String getMessage();
 
-    public String AddAddressBook(AddressDTO addressDTO);
+//   AddressModel AddAddressBook(AddressDTO addressDTO);
 
-    AddressModel getContactById(int getId);
+    Optional<AddressModel> getContactById(int getId);
 
-    List<AddressModel> getListContacts();
+    List<AddressModel> getListOfContacts();
 
     void deleteContact(int id);
 
-    AddressModel updateAddressContact(int getId, AddressDTO addressDTO);
-}
+    AddressModel updateContact(int getId, AddressDTO addressBookDto);
 
+    Optional<AddressModel> getAddressBookData(String token);
+
+    String addData(AddressDTO addressBookDto);
+
+}
